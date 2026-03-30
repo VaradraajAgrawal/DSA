@@ -180,17 +180,17 @@
 //   }
 // }
 
-let num = prompt("Enter a Number!!");
+// let num = prompt("Enter a Number!!");
 
-while (isNaN(num) || num === "") {
-  num = prompt("Enter a Number!!");
-}
-let numb = Number(num);
-let sum = 0;
-for (let index = num.length; index > 0; index--) {
-  console.log(`Number ${num}`);
-  sum += numb % 10;
-  console.log(sum);
-  numb = Math.floor(numb / 10);
-}
-console.log(`Last Sum ${sum}`);
+// while (isNaN(num) || num === "") {
+//   num = prompt("Enter a Number!!");
+// }
+// let numb = Number(num);
+// let sum = 0;
+// for (let index = num.length; index > 0; index--) {
+//   console.log(`Number ${num}`);
+//   sum += numb % 10;
+//   console.log(sum);
+//   numb = Math.floor(numb / 10);
+// }
+// console.log(`Last Sum ${sum}`);
