@@ -194,3 +194,33 @@
 //   numb = Math.floor(numb / 10);
 // }
 // console.log(`Last Sum ${sum}`);
+
+// let num = prompt("Enter a Number!!");
+
+// while (isNaN(num) || num === "") {
+//   num = prompt("Enter a Number!!");
+// }
+// let numb = Number(num);
+// let sum = "";
+// for (let index = num.length; index > 0; index--) {
+//   console.log(`Number ${num}`);
+//   let str = numb % 10;
+//   let conv = String(str);
+//   sum += conv;
+//   numb = Math.floor(numb / 10);
+// }
+// console.log(`Last Sum ${sum}`);
+
+let num = prompt("Enter a Number!!");
+
+while (isNaN(num) || num === "") {
+  num = prompt("Enter a Number!!");
+}
+let numb = Number(num);
+let sum = 0;
+for (let index = num.length; index > 0; index--) {
+  let rem = numb % 10;
+  sum = sum * 10 + rem;
+  numb = Math.floor(numb / 10);
+}
+console.log(`Reverse Digit ${sum}`);
