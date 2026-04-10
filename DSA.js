@@ -211,16 +211,35 @@
 // }
 // console.log(`Last Sum ${sum}`);
 
+// let num = prompt("Enter a Number!!");
+
+// while (isNaN(num) || num === "") {
+//   num = prompt("Enter a Number!!");
+// }
+// let numb = Number(num);
+// let sum = 0;
+// for (let index = num.length; index > 0; index--) {
+//   let rem = numb % 10;
+//   sum = sum * 10 + rem;
+//   numb = Math.floor(numb / 10);
+// }
+// console.log(`Reverse Digit ${sum}`);
+
 let num = prompt("Enter a Number!!");
 
 while (isNaN(num) || num === "") {
   num = prompt("Enter a Number!!");
 }
 let numb = Number(num);
+let fakenum = numb;
 let sum = 0;
-for (let index = num.length; index > 0; index--) {
-  let rem = numb % 10;
-  sum = sum * 10 + rem;
-  numb = Math.floor(numb / 10);
+while (fakenum > 0) {
+  let rem = fakenum % 10;
+  let fact = 1;
+  fakenum = Math.floor(fakenum / 10);
+  for (let index = 1; index <= rem; index++) {
+    fact = fact * index;
+  }
+  sum += fact;
 }
-console.log(`Reverse Digit ${sum}`);
+console.log(sum === numb ? "Strong Number" : "Not a Strong Number");
