@@ -225,21 +225,47 @@
 // }
 // console.log(`Reverse Digit ${sum}`);
 
-let num = prompt("Enter a Number!!");
+// let num = prompt("Enter a Number!!");
 
-while (isNaN(num) || num === "") {
-  num = prompt("Enter a Number!!");
-}
-let numb = Number(num);
-let fakenum = numb;
-let sum = 0;
-while (fakenum > 0) {
-  let rem = fakenum % 10;
-  let fact = 1;
-  fakenum = Math.floor(fakenum / 10);
-  for (let index = 1; index <= rem; index++) {
-    fact = fact * index;
+// while (isNaN(num) || num === "") {
+//   num = prompt("Enter a Number!!");
+// }
+// let numb = Number(num);
+// let fakenum = numb;
+// let sum = 0;
+// while (fakenum > 0) {
+//   let rem = fakenum % 10;
+//   let fact = 1;
+//   fakenum = Math.floor(fakenum / 10);
+//   for (let index = 1; index <= rem; index++) {
+//     fact = fact * index;
+//   }
+//   sum += fact;
+// }
+// console.log(sum === numb ? "Strong Number" : "Not a Strong Number");
+
+let ran = Math.floor(Math.random() * 100) + 1;
+let num = Number(prompt("Enter your Guess!!"));
+let trial = 1;
+// 1. num not equals to ran 2. not a number 3.
+
+while (num !== ran && trial !== 5) {
+  trial++;
+  if (isNaN(num) || num <= 0) {
+    console.log("error occ!!");
+    num = Number(prompt("Enter your guess agin!!"));
+    continue;
   }
-  sum += fact;
+  if (num < ran) {
+    console.log("Guess is smaller!!");
+  }
+  if (num > ran) {
+    console.log("Guess is larger!!");
+  }
+  num = Number(prompt("Enter your guess agin!!"));
+  continue;
 }
-console.log(sum === numb ? "Strong Number" : "Not a Strong Number");
+
+console.log(
+  num === ran ? `Congratulation ${ran}` : "Out of chances the no. is " + ran,
+);
