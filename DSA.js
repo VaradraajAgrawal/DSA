@@ -248,10 +248,12 @@ let ran = Math.floor(Math.random() * 100) + 1;
 let num = Number(prompt("Enter your Guess!!"));
 let trial = 1;
 // 1. num not equals to ran 2. not a number 3.
-
-while (num !== ran && trial !== 5) {
+if (num === 0) {
+  console.log("EXITED");
+}
+while (num !== ran && trial !== 5 && num !== 0) {
   trial++;
-  if (isNaN(num) || num <= 0) {
+  if (isNaN(num) || num < 0) {
     console.log("error occ!!");
     num = Number(prompt("Enter your guess agin!!"));
     continue;
