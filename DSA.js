@@ -244,30 +244,41 @@
 // }
 // console.log(sum === numb ? "Strong Number" : "Not a Strong Number");
 
-let ran = Math.floor(Math.random() * 100) + 1;
-let num = Number(prompt("Enter your Guess!!"));
-let trial = 1;
-// 1. num not equals to ran 2. not a number 3.
-if (num === 0) {
-  console.log("EXITED");
-}
-while (num !== ran && trial !== 5 && num !== 0) {
-  trial++;
-  if (isNaN(num) || num < 0) {
-    console.log("error occ!!");
-    num = Number(prompt("Enter your guess agin!!"));
-    continue;
-  }
-  if (num < ran) {
-    console.log("Guess is smaller!!");
-  }
-  if (num > ran) {
-    console.log("Guess is larger!!");
-  }
-  num = Number(prompt("Enter your guess agin!!"));
-  continue;
-}
+// let ran = Math.floor(Math.random() * 100) + 1;
+// let num = Number(prompt("Enter your Guess!!"));
+// let trial = 1;
+// // 1. num not equals to ran 2. not a number 3.
+// if (num === 0) {
+//   console.log("EXITED");
+// }
+// while (num !== ran && trial !== 5 && num !== 0) {
+//   trial++;
+//   if (isNaN(num) || num < 0) {
+//     console.log("error occ!!");
+//     num = Number(prompt("Enter your guess agin!!"));
+//     continue;
+//   }
+//   if (num < ran) {
+//     console.log("Guess is smaller!!");
+//   }
+//   if (num > ran) {
+//     console.log("Guess is larger!!");
+//   }
+//   num = Number(prompt("Enter your guess agin!!"));
+//   continue;
+// }
 
-console.log(
-  num === ran ? `Congratulation ${ran}` : "Out of chances the no. is " + ran,
-);
+// console.log(
+//   num === ran ? `Congratulation ${ran}` : "Out of chances the no. is " + ran,
+// );
+
+// PATTERN PROGRAMMING //
+
+let prompt = require("prompt-sync")();
+
+for (let i = 0; i < 5; i++) {
+  for (let index = 0; index < 5; index++) {
+    process.stdout.write("* ");
+  }
+  console.log();
+}
