@@ -276,9 +276,68 @@
 
 let prompt = require("prompt-sync")();
 
-for (let i = 0; i < 5; i++) {
-  for (let index = 0; index < 5; index++) {
-    process.stdout.write("* ");
-  }
-  console.log();
-}
+// Square Pattern//
+// Outer Loop is creating rows and Inner loop is creating Colomn //
+// for (let i = 0; i < 5; i++) {
+//   for (let index = 0; index < 5; index++) {
+//     process.stdout.write("* ");
+//   }
+//   console.log();
+// }
+
+// Right-Angled Triangle //
+// for (let i = 0; i < 5; i++) {
+//   for (let index = 0; index < i; index++) {
+//     process.stdout.write("* ");
+//   }
+//   console.log();
+// }
+
+// Numbers Triangle //
+// let num = 0;
+// for (let i = 1; i <= 5; i++) {
+//   for (let index = 1; index <= i; index++) {
+//     num += 1;
+//     process.stdout.write(index + " ");
+//   }
+//   num = 0;
+//   console.log();
+// }
+
+// 2nd Method //
+// let num = 0;
+// for (let i = 0; i < 5; i++) {
+//   for (let index = 0; index <= i; index++) {
+//     num += 1;
+//     process.stdout.write(num + " ");
+//   }
+//   num = 0;
+//   console.log();
+// }
+
+// ALPHABETS TRIANGLE //
+// for (let i = 0; i < 5; i++) {
+//   let alp = ["A", "B", "C", "D", "E"];
+//   for (let index = 0; index <= i; index++) {
+//     process.stdout.write(alp[index] + " ");
+//   }
+//   console.log();
+// }
+
+// 2nd Method //
+// for (let i = 0; i < 5; i++) {
+//   let alp = 65;
+//   for (let index = 0; index <= i; index++) {
+//     process.stdout.write(String.fromCharCode(alp) + " ");
+//     alp++;
+//   }
+//   console.log();
+// }
+
+// Inverted Triangle //
+// for (let i = 5; i > 0; i--) {
+//   for (let index = i; index > 0; index--) {
+//     process.stdout.write("* ");
+//   }
+//   console.log();
+// }
